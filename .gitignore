@@ -1,0 +1,37 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# IDE
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Streamlit
+.streamlit/secrets.toml
+# Generated monitoring output
+data/monitoring_output.json
+
+# Legacy agent files kept locally
+app/agent/agent_executor.py
+app/agent/question_router.py
+app/agent/llm_router.py
+app/agent/llm_test.py
