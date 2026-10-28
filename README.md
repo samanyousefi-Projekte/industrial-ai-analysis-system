@@ -345,6 +345,52 @@ The monitoring workflow operates automatically and does not require the user to 
 
 ---
 
+
+# Screenshots
+
+## Streamlit Production Dashboard
+
+The Streamlit interface combines production KPI visualization with the conversational AI assistant.
+
+![Streamlit Production Dashboard](docs/screenshots/01_dashboard_overview.png)
+
+---
+
+## n8n End-to-End Monitoring Workflow
+
+The n8n workflow retrieves the real monitoring status from the FastAPI endpoint, evaluates whether critical machines exist, builds a dynamic alert message, and sends the result through Telegram.
+
+![n8n End-to-End Monitoring Workflow](docs/screenshots/02_n8n_end_to_end_workflow.png)
+
+---
+
+## Real Telegram Critical Alert
+
+When one or more machines are classified as critical, the workflow sends a real Telegram notification containing the affected machine, KPI values, and frequent errors.
+
+![Telegram Critical Alert](docs/screenshots/03_telegram_critical_alert.png)
+
+---
+
+## Microsoft Power Automate Prototype
+
+Before implementing the final n8n workflow, Microsoft Power Automate was evaluated for scheduled monitoring and conditional alert generation.
+
+The workflow logic was successfully tested, while external notification delivery through Microsoft Teams, Outlook, Gmail, and Mail connectors was limited by the available Microsoft tenant environment.
+
+![Microsoft Power Automate Prototype](docs/screenshots/04_power_automate_prototype.png)
+
+---
+
+## FastAPI Monitoring Response in n8n
+
+The n8n HTTP Request node retrieves structured monitoring data directly from the Python FastAPI service.
+
+![FastAPI Monitoring Response in n8n](docs/screenshots/05_n8n_fastapi_response.png)
+
+---
+
+
 # Streamlit Dashboard
 
 The Streamlit application provides:
@@ -589,6 +635,14 @@ industrial-ai-analysis-system/
 │   ├── production_analysis.db
 │   └── production_clean.db
 │
+├── docs/
+│   └── screenshots/
+│       ├── 01_dashboard_overview.png
+│       ├── 02_n8n_end_to_end_workflow.png
+│       ├── 03_telegram_critical_alert.png
+│       ├── 04_power_automate_prototype.png
+│       └── 05_n8n_fastapi_response.png
+│
 ├── README.md
 ├── requirements.txt
 └── .gitignore
@@ -603,7 +657,7 @@ Additional development and test scripts may be present in the repository.
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/samanyousefi-Projekte/industrial-ai-analysis-system.git
 cd industrial-ai-analysis-system
 ```
 
